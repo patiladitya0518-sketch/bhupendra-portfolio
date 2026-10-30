@@ -713,3 +713,8 @@ html,body{background:#f8f8f3!important;color:#26352b!important}
 @media(max-width:760px){.nav-links{background:#fffefa!important;border:1px solid #dce5dc!important;box-shadow:0 18px 40px #26352b12!important}}
 @media(max-width:650px){.site-shell:before{opacity:.06}#about,#skills{padding:24px 18px;margin-top:48px;border-radius:22px}.project-card:hover{transform:translateY(-3px)!important}.cursor-smoke{opacity:.06!important}}
 @media(prefers-reduced-motion:reduce){.site-shell:before{display:none}.project-card,.button,.profile-photo-frame{transition:none!important}.project-card:hover{transform:none!important}.cursor-smoke,.smoke-trail-canvas{display:none!important}}
+
+/* Replace the smoky cursor effect with a delicate soft-minimal sparkle trail */
+.soft-particle-trail{opacity:.72!important;mix-blend-mode:multiply!important;pointer-events:none!important;z-index:20!important}
+@media(max-width:760px){.soft-particle-trail{display:none!important}}
+@media(prefers-reduced-motion:reduce){.soft-particle-trail{display:none!important}}
