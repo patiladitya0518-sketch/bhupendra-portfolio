@@ -381,3 +381,118 @@ body{background:#f6f3eb!important;color:#182521!important}
 .hero-visual:not(:hover) .profile-photo{transition:transform .55s cubic-bezier(.2,.8,.2,1),filter .35s ease}
 @media (hover:none),(pointer:coarse){.profile-photo{transform:none!important}}
 @media(prefers-reduced-motion:reduce){.profile-photo-frame{animation:none!important}.profile-photo{transition:none!important;transform:none!important}}
+
+
+/* AI FUTURISTIC + INTERACTIVE 3D — Cyber Neon redesign */
+:root{
+  color-scheme:dark;
+  --muted:#b3aecb;
+  --line:rgba(164,133,255,.24);
+  --purple:#b967ff;
+  --cyan:#42f5ff;
+}
+html,body{background:#080611!important;color:#f7f4ff!important}
+.site-shell{
+  background:
+    radial-gradient(ellipse at 10% 9%,#8b2cff20,transparent 32%),
+    radial-gradient(ellipse at 88% 30%,#00e5ff13,transparent 31%),
+    radial-gradient(ellipse at 60% 82%,#ff2bd612,transparent 35%),
+    #080611!important;
+}
+.site-shell:before{
+  content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:.14;
+  background-image:linear-gradient(#9b7bff30 1px,transparent 1px),linear-gradient(90deg,#9b7bff30 1px,transparent 1px);
+  background-size:48px 48px;mask-image:linear-gradient(to bottom,black,transparent 78%);
+}
+.ambient-one{background:#9d38ff!important;opacity:.22!important}
+.ambient-two{background:#00d9ff!important;opacity:.18!important}
+.topbar{background:#0b0715d9!important;border-bottom-color:#b967ff40!important;box-shadow:0 8px 35px #0003}
+.brand-avatar img{border-color:#b967ff!important;box-shadow:0 0 0 3px #42f5ff20,0 0 24px #b967ff30!important}
+.brand-avatar .brand-name,.footer .brand{color:#f7f4ff!important}
+.nav-links{color:#c0bad5!important}
+.nav-links a:hover,.nav-links a.active{color:#42f5ff!important;text-shadow:0 0 18px #42f5ff80}
+.nav-cta{border-color:#b967ff66!important;background:#b967ff0c!important}
+.nav-cta:hover{border-color:#42f5ff!important;box-shadow:0 0 22px #42f5ff1c}
+.eyebrow{color:#42f5ff!important;border-color:#42f5ff55!important;background:#42f5ff0b!important;box-shadow:inset 0 0 20px #42f5ff08,0 0 25px #42f5ff0a}
+.status-dot{background:#42f5ff!important;box-shadow:0 0 14px #42f5ff!important}
+.hero h1,.section-block h2{color:#f7f4ff}
+.gradient-text{background-image:linear-gradient(100deg,#b967ff 0%,#42f5ff 52%,#ff55c8 100%)!important}
+.hero-intro,.about-main p,.section-lead,.project-description,.contact-panel>p{color:#b3aecb!important}
+.hero-intro strong{color:#fff!important}
+.hero-meta{color:#aaa4c5!important}
+.hero-meta svg{color:#42f5ff!important}
+.button-primary{background:linear-gradient(110deg,#b967ff,#42f5ff)!important;color:#090613!important;box-shadow:0 0 26px #b967ff30,0 8px 28px #42f5ff14!important}
+.button-primary:hover{filter:brightness(1.12);box-shadow:0 0 38px #42f5ff45!important}
+.button-quiet{background:#ffffff06!important;color:#f7f4ff!important;border-color:#b967ff66!important}
+.button-quiet:hover{border-color:#42f5ff!important;background:#42f5ff0b!important}
+.hero-visual{filter:drop-shadow(0 16px 45px #8b2cff18)}
+.planet{background:radial-gradient(circle at 27% 22%,#fff 0,#42f5ff 8%,#4b2eaa 28%,#18112f 58%,#06040c 78%)!important;box-shadow:inset -30px -22px 55px #02010a,0 0 80px #8b2cff44,0 0 130px #42f5ff13!important}
+.planet-shine{background:#42f5ff88!important}
+.planet-grid{background:repeating-radial-gradient(ellipse at center,transparent 0 22px,#42f5ff2a 23px 24px)!important}
+.orbit{border-color:#b967ff85!important}
+.orbit-b{border-color:#42f5ff55!important}
+.orbit-c{border-color:#ff55c83b!important}
+.floating-label{background:#100b20e8!important;border-color:#b967ff55!important;color:#f7f4ff!important;box-shadow:0 12px 38px #0007,0 0 24px #8b2cff15!important}
+.floating-label small{color:#aaa4c5!important}.floating-label b{color:#fff!important}
+.label-icon,.side-icon,.skill-icon{background:#b967ff1b!important;color:#42f5ff!important}
+.profile-photo-frame{border-color:#42f5ff!important;background:linear-gradient(140deg,#b967ff,#42f5ff 52%,#ff55c8)!important;box-shadow:0 20px 70px #0009,0 0 40px #42f5ff25!important}
+.profile-photo-frame:hover{box-shadow:0 24px 80px #0009,0 0 65px #b967ff55!important}
+.quick-stats{border-color:#b967ff30!important;background:#100b20a8!important;border-radius:20px;padding:20px 8px}
+.quick-stats>div{border-color:#b967ff25!important}
+.quick-stats strong{color:#42f5ff!important}.quick-stats span{color:#b3aecb!important}
+.section-kicker{color:#42f5ff!important}
+.panel{background:linear-gradient(145deg,#151027ed,#0e0a1beb)!important;border-color:#b967ff35!important;box-shadow:0 18px 55px #0003!important}
+.about-main h3,.about-side h3,.skill-heading h3{color:#f7f4ff!important}
+.muted,.about-main p,.about-side ul,.skill-heading p{color:#b3aecb!important}
+.about-side:hover,.about-main:hover,.skills-panel:hover{border-color:#42f5ff70!important;box-shadow:0 18px 55px #42f5ff0d!important}
+.text-link{color:#42f5ff!important}.text-link:hover{color:#ff78d7!important}
+.project-card{background:#100b20!important;border-color:#b967ff38!important;box-shadow:0 14px 45px #0003!important}
+.project-card:hover{border-color:#42f5ffb0!important;box-shadow:0 20px 55px #42f5ff12,0 0 28px #b967ff10!important}
+.project-art{background:radial-gradient(ellipse at 50% 50%,#b967ff3b,transparent 65%),linear-gradient(145deg,#17102b,#0c0a18)!important}
+.project-card.cyan .project-art{background:radial-gradient(ellipse at 50% 50%,#42f5ff32,transparent 65%),linear-gradient(145deg,#0c1c2a,#0c0a18)!important}
+.project-card.pink .project-art{background:radial-gradient(ellipse at 50% 50%,#ff55c83a,transparent 65%),linear-gradient(145deg,#241026,#0c0a18)!important}
+.project-number{color:#aaa4c5!important}
+.project-symbol{color:#d5a4ff!important;text-shadow:0 0 32px #b967ff75!important}
+.cyan .project-symbol{color:#42f5ff!important;text-shadow:0 0 32px #42f5ff75!important}
+.pink .project-symbol{color:#ff80dc!important;text-shadow:0 0 32px #ff55c875!important}
+.project-type,.project-link{color:#42f5ff!important}
+.cyan .project-type{color:#42f5ff!important}.pink .project-type{color:#ff80dc!important}
+.project-content h3{color:#f7f4ff!important}
+.tag-list span,.skill-list span{background:#ffffff08!important;border-color:#b967ff2b!important;color:#d4cce9!important}
+.skill-list span:hover{border-color:#42f5ff88!important;background:#42f5ff10!important;color:#fff!important;box-shadow:0 0 20px #42f5ff10}
+.contact-panel{background:radial-gradient(ellipse at 12% 0%,#b967ff24,transparent 45%),radial-gradient(ellipse at 90% 100%,#42f5ff13,transparent 42%),#100b20!important;border-color:#b967ff55!important}
+.contact-panel h2{color:#f7f4ff!important}
+.contact-detail{background:#171027!important;border-color:#b967ff38!important;color:#f7f4ff!important}
+.contact-detail:hover{border-color:#42f5ff!important;background:#42f5ff0b!important;box-shadow:0 0 26px #42f5ff10}
+.contact-detail-icon{background:#42f5ff13!important;color:#42f5ff!important}
+.contact-detail-arrow,.education-label{color:#ff80dc!important}
+.contact-detail small,.education-card>span:not(.education-label){color:#b3aecb!important}
+.contact-detail strong,.education-card strong{color:#f7f4ff!important}
+.education-card{background:#0c0918!important;border-color:#b967ff30!important}
+.education-divider{background:#b967ff30!important}
+.social-links a,.back-top{color:#42f5ff!important}
+.social-links a:hover{color:#ff80dc!important}
+.footer{border-top-color:#b967ff30!important;color:#aaa4c5!important}
+.cursor-smoke{mix-blend-mode:screen!important;opacity:.28!important}
+.smoke-trail-canvas{opacity:.65!important;mix-blend-mode:screen!important}
+::selection{background:#b967ff70;color:#fff}
+.project-card,.panel,.contact-panel,.contact-detail,.button,.profile-photo-frame{transform-style:preserve-3d}
+.project-card{transition:transform .38s cubic-bezier(.2,.8,.2,1),border-color .3s,box-shadow .3s!important}
+.project-card:hover{transform:translateY(-9px) rotateX(1deg)!important}
+.project-art .art-ring{border-color:#b967ff68!important}
+.project-art .ring-two{border-color:#42f5ff50!important}
+@media(max-width:760px){
+ .nav-links{background:#100b20!important;border:1px solid #b967ff38!important;box-shadow:0 18px 40px #0008!important}
+ .project-grid{gap:13px}
+}
+@media(max-width:650px){
+ .site-shell:before{background-size:32px 32px;opacity:.09}
+ .hero-visual{filter:none}
+ .project-card:hover{transform:translateY(-3px)!important}
+ .cursor-smoke{opacity:.14!important}
+}
+@media(prefers-reduced-motion:reduce){
+ .site-shell:before{display:none}
+ .project-card,.button,.profile-photo-frame{transition:none!important}
+ .project-card:hover{transform:none!important}
+}
