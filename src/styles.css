@@ -523,3 +523,130 @@ html,body{background:#080611!important;color:#f7f4ff!important}
  #about,#skills{padding:24px 18px;margin-top:48px;border-radius:22px}
  #projects,#contact{padding-top:82px}
 }
+
+
+/* SOFT MINIMAL — calm sage, oat, and terracotta with mixed light/dark sections */
+:root{
+  color-scheme:dark;
+  --muted:#c0c4bc;
+  --line:rgba(223,231,214,.16);
+  --purple:#b5c7a5;
+  --cyan:#e7a27f;
+}
+html,body{background:#202720!important;color:#f5f2e9!important}
+.site-shell{
+  background:
+    radial-gradient(ellipse at 12% 12%,#8298791b,transparent 34%),
+    radial-gradient(ellipse at 88% 34%,#d99b7910,transparent 32%),
+    #202720!important;
+}
+.site-shell:before{
+  content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:.07;
+  background-image:radial-gradient(#dfe7d6 0.7px,transparent 0.7px);
+  background-size:22px 22px;mask-image:linear-gradient(to bottom,black,transparent 72%);
+}
+.ambient-one{background:#91a987!important;opacity:.16!important;filter:blur(100px)!important}
+.ambient-two{background:#d99b79!important;opacity:.12!important;filter:blur(110px)!important}
+.topbar{background:#202720d9!important;border-bottom-color:#dfe7d621!important}
+.brand-avatar img{border-color:#91a987!important;box-shadow:0 0 0 3px #d99b7922!important}
+.brand-avatar .brand-name,.footer .brand{color:#f5f2e9!important}
+.nav-links{color:#c0c4bc!important}
+.nav-links a:hover,.nav-links a.active{color:#d6e4c9!important}
+.nav-cta{border-color:#dfe7d638!important;background:#dfe7d608!important}
+.nav-cta:hover{border-color:#91a987!important;background:#91a98716!important}
+.eyebrow{color:#d6e4c9!important;border-color:#91a98755!important;background:#91a98710!important}
+.status-dot{background:#a9c79a!important;box-shadow:0 0 12px #91a987!important}
+.hero h1,.section-block h2{color:#f5f2e9!important}
+.gradient-text{background-image:linear-gradient(105deg,#d6e4c9 0%,#a9c79a 48%,#e7a27f 100%)!important}
+.hero-intro,.section-lead{color:#c0c4bc!important}
+.hero-intro strong{color:#fffaf0!important}
+.hero-meta{color:#b0b7ad!important}
+.hero-meta svg{color:#d99b79!important}
+.button-primary{background:linear-gradient(110deg,#d6e4c9,#a9c79a)!important;color:#202720!important;box-shadow:0 8px 26px #91a98720!important}
+.button-primary:hover{background:#e5eddd!important;box-shadow:0 12px 34px #91a98735!important}
+.button-quiet{background:#ffffff05!important;color:#f5f2e9!important;border-color:#dfe7d638!important}
+.button-quiet:hover{border-color:#d99b79!important;background:#d99b7910!important}
+.planet{background:radial-gradient(circle at 28% 23%,#f5f2e9 0,#d6e4c9 13%,#91a987 34%,#455849 62%,#202720 82%)!important;box-shadow:inset -25px -20px 45px #141b15a8,0 0 70px #91a98722!important}
+.planet-shine{background:#f5f2e966!important}
+.planet-grid{background:repeating-radial-gradient(ellipse at center,transparent 0 22px,#d6e4c925 23px 24px)!important}
+.orbit{border-color:#a9c79a77!important}.orbit-b{border-color:#d99b7940!important}.orbit-c{border-color:#f5f2e92b!important}
+.floating-label{background:#29332be8!important;border-color:#dfe7d62b!important;color:#f5f2e9!important;box-shadow:0 12px 32px #0003!important}
+.floating-label small{color:#b0b7ad!important}.floating-label b{color:#f5f2e9!important}
+.label-icon,.side-icon,.skill-icon{background:#91a98720!important;color:#d6e4c9!important}
+.profile-photo-frame{border-color:#d99b79!important;background:linear-gradient(145deg,#d6e4c9,#91a987 52%,#d99b79)!important;box-shadow:0 20px 55px #0005,0 0 35px #91a98720!important}
+.profile-photo-frame:hover{box-shadow:0 24px 65px #0006,0 0 42px #d99b7930!important}
+.quick-stats{border-color:#dfe7d624!important;background:#29332b9c!important;border-radius:20px;padding:20px 8px}
+.quick-stats>div{border-color:#dfe7d61b!important}
+.quick-stats strong{color:#d6e4c9!important}.quick-stats span{color:#c0c4bc!important}
+.section-kicker{color:#d99b79!important}
+.panel{background:linear-gradient(145deg,#2a342c,#252e26)!important;border-color:#dfe7d622!important;box-shadow:0 18px 45px #00000010!important}
+.about-main h3,.about-side h3,.skill-heading h3{color:#f5f2e9!important}
+.muted,.about-main p,.about-side ul,.skill-heading p{color:#c0c4bc!important}
+.about-side:hover,.about-main:hover,.skills-panel:hover{border-color:#91a98770!important;box-shadow:0 18px 45px #91a9870c!important}
+.text-link{color:#d6e4c9!important}.text-link:hover{color:#e7a27f!important}
+.project-card{background:#29322a!important;border-color:#dfe7d624!important;box-shadow:0 12px 32px #0002!important}
+.project-card:hover{border-color:#a9c79a!important;box-shadow:0 18px 45px #0003,0 0 22px #91a9870b!important}
+.project-art{background:radial-gradient(ellipse at 50% 50%,#91a98735,transparent 65%),linear-gradient(145deg,#344237,#252e27)!important}
+.project-card.cyan .project-art{background:radial-gradient(ellipse at 50% 50%,#a9c79a35,transparent 65%),linear-gradient(145deg,#293c34,#252e27)!important}
+.project-card.pink .project-art{background:radial-gradient(ellipse at 50% 50%,#d99b7935,transparent 65%),linear-gradient(145deg,#43352e,#252e27)!important}
+.project-number{color:#c0c4bc!important}
+.project-symbol{color:#d6e4c9!important;text-shadow:0 0 25px #91a98735!important}
+.cyan .project-symbol{color:#c7dec0!important}.pink .project-symbol{color:#e7a27f!important}
+.project-type,.project-link{color:#d6e4c9!important}
+.cyan .project-type{color:#a9c79a!important}.pink .project-type{color:#e7a27f!important}
+.project-content h3{color:#f5f2e9!important}
+.project-description{color:#c0c4bc!important}
+.tag-list span,.skill-list span{background:#ffffff08!important;border-color:#dfe7d624!important;color:#d8ddd3!important}
+.skill-list span:hover{border-color:#a9c79a!important;background:#91a98714!important;color:#fff!important}
+.contact-panel{background:radial-gradient(ellipse at 12% 0%,#91a9871b,transparent 45%),radial-gradient(ellipse at 90% 100%,#d99b7910,transparent 42%),#29322a!important;border-color:#dfe7d630!important}
+.contact-panel h2{color:#f5f2e9!important}
+.contact-detail{background:#202720!important;border-color:#dfe7d626!important;color:#f5f2e9!important}
+.contact-detail:hover{border-color:#a9c79a!important;background:#91a98710!important}
+.contact-detail-icon{background:#91a9871a!important;color:#d6e4c9!important}
+.contact-detail-arrow,.education-label{color:#e7a27f!important}
+.contact-detail small,.education-card>span:not(.education-label){color:#c0c4bc!important}
+.contact-detail strong,.education-card strong{color:#f5f2e9!important}
+.education-card{background:#222a23!important;border-color:#dfe7d624!important}
+.education-divider{background:#dfe7d624!important}
+.social-links a,.back-top{color:#d6e4c9!important}
+.social-links a:hover{color:#e7a27f!important}
+.footer{border-top-color:#dfe7d624!important;color:#b0b7ad!important}
+.cursor-smoke{mix-blend-mode:screen!important;opacity:.2!important}
+.smoke-trail-canvas{opacity:.45!important;mix-blend-mode:screen!important}
+::selection{background:#91a98766;color:#fff}
+.project-card,.panel,.contact-panel,.contact-detail,.button,.profile-photo-frame{transform-style:preserve-3d}
+.project-card{transition:transform .38s cubic-bezier(.2,.8,.2,1),border-color .3s,box-shadow .3s!important}
+.project-card:hover{transform:translateY(-7px) rotateX(1deg)!important}
+
+/* Deliberate light interludes for a calm, mixed-surface reading rhythm */
+#about{position:relative;padding:clamp(28px,4vw,48px);margin-top:70px;border:1px solid #d5dfcf;border-radius:28px;background:linear-gradient(135deg,#f7f5ed,#e9f0e5)!important;color:#26352b!important;box-shadow:0 20px 60px #00000010}
+#about .section-kicker{color:#9a603e!important}
+#about h2,#about .about-main h3,#about .about-side h3{color:#26352b!important}
+#about .muted,#about .about-main p,#about .about-side ul{color:#59665b!important}
+#about .panel{background:#ffffffb8!important;border-color:#d4ded0!important;box-shadow:0 10px 30px #26352b09!important}
+#about .side-icon{background:#91a98722!important;color:#476a4d!important}
+#about .text-link{color:#476a4d!important}
+#about .text-link:hover{color:#9a603e!important}
+#skills{position:relative;padding:clamp(28px,4vw,48px);margin-top:70px;border-radius:28px;background:linear-gradient(135deg,#f3f1e8,#e5eee4)!important;border:1px solid #d5dfcf;color:#26352b!important}
+#skills .section-kicker{color:#9a603e!important}
+#skills h2{color:#26352b!important}
+#skills .section-lead{color:#59665b!important}
+#skills .skills-panel{background:#ffffffc9!important;border-color:#d4ded0!important;box-shadow:0 12px 35px #26352b09!important}
+#skills .skill-heading h3{color:#26352b!important}
+#skills .skill-heading p{color:#59665b!important}
+#skills .skill-icon{background:#91a98725!important;color:#476a4d!important}
+#skills .skill-list span{background:#f7f5ed!important;border-color:#d4ded0!important;color:#344638!important}
+#skills .skill-list span:hover{background:#e3ecdf!important;border-color:#91a987!important;color:#26352b!important}
+@media(max-width:760px){.nav-links{background:#29322a!important;border:1px solid #dfe7d630!important;box-shadow:0 18px 40px #0005!important}}
+@media(max-width:650px){
+ .site-shell:before{opacity:.04}
+ #about,#skills{padding:24px 18px;margin-top:48px;border-radius:22px}
+ .project-card:hover{transform:translateY(-3px)!important}
+ .cursor-smoke{opacity:.12!important}
+}
+@media(prefers-reduced-motion:reduce){
+ .site-shell:before{display:none}
+ .project-card,.button,.profile-photo-frame{transition:none!important}
+ .project-card:hover{transform:none!important}
+ .cursor-smoke,.smoke-trail-canvas{display:none!important}
+}
