@@ -359,3 +359,9 @@ body{background:#f6f3eb!important;color:#182521!important}
   .brand-avatar img, .profile-photo-frame { animation: none !important; }
   .profile-photo { transition: none !important; }
 }
+
+/* MarketIQ logo blends into the portfolio's dark project-card theme */
+.project-art-marketiq{background:radial-gradient(ellipse at 50% 45%,#0b715b44,transparent 68%),#0b111b!important}
+.project-art-marketiq .project-logo{width:min(100%,270px);height:100%;max-height:180px;object-fit:contain;padding:12px;position:relative;z-index:1;transition:transform .4s ease}
+.project-card:hover .project-art-marketiq .project-logo{transform:scale(1.04)}
+@media(prefers-reduced-motion:reduce){.project-art-marketiq .project-logo{transition:none}}
