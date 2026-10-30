@@ -10,8 +10,9 @@ function CursorSmokeCanvas() {
     if (!canvas || window.matchMedia("(pointer: coarse), (prefers-reduced-motion: reduce)").matches) return;
     const ctx = canvas.getContext("2d", { alpha: true });
     if (!ctx) return;
-    let width = 0, height = 0, raf = 0, lastX = null, lastY = null, lastEmit = 0;
+    let width = 0, height = 0, raf = 0, lastX = null, lastY = null;
     const particles = [];
+    const colors = ["#789b78", "#b87958", "#a8c4a2", "#d5a58a"];
     const resize = () => {
       const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
       width = window.innerWidth; height = window.innerHeight;
@@ -21,45 +22,29 @@ function CursorSmokeCanvas() {
     };
     const move = (e) => {
       const x = e.clientX, y = e.clientY;
-      if (lastX !== null) {
-        const dx = x - lastX, dy = y - lastY;
-        const distance = Math.hypot(dx, dy);
-        const count = Math.min(5, Math.max(1, Math.ceil(distance / 18)));
-        for (let i = 0; i < count; i++) {
-          const t = (i + 1) / count;
-          particles.push({ x: lastX + dx*t, y: lastY + dy*t, vx: -dx*.025 + (Math.random()-.5)*1.05, vy: -dy*.025 + (Math.random()-.5)*.8, r: 28 + Math.random()*52, rx: 0.55 + Math.random()*1.15, ry: 0.7 + Math.random()*1.5, wobble: Math.random()*Math.PI*2, wobbleSpeed: .012 + Math.random()*.035, life: 1, decay: .003 + Math.random()*.0025, hue: Math.random() > .65 ? 38 : 151 });
-        }
-      } else {
-        particles.push({x,y,vx:(Math.random()-.5)*.5,vy:(Math.random()-.5)*.5,r:32,rx:.8,ry:1.25,wobble:Math.random()*6,wobbleSpeed:.02,life:1,decay:.006,hue:38});
+      if (lastX !== null && Math.hypot(x-lastX,y-lastY)>5) {
+        particles.push({x,y,vx:(Math.random()-.5)*.55,vy:-.35-Math.random()*.65,r:1.5+Math.random()*2.8,life:1,decay:.012+Math.random()*.009,color:colors[Math.floor(Math.random()*colors.length)],twinkle:Math.random()*Math.PI*2});
       }
-      lastX = x; lastY = y; lastEmit = performance.now();
-      if (particles.length > 70) particles.splice(0, particles.length - 70);
+      lastX=x; lastY=y;
+      if(particles.length>48) particles.splice(0,particles.length-48);
     };
     const draw = () => {
-      ctx.clearRect(0, 0, width, height);
-      for (let i = particles.length - 1; i >= 0; i--) {
-        const p = particles[i];
-        p.x += p.vx + Math.sin(p.wobble) * .22; p.y += p.vy + Math.cos(p.wobble * .7) * .18; p.wobble += p.wobbleSpeed; p.vx *= .987; p.vy -= .012; p.r *= 1.012; p.life -= p.decay;
-        if (p.life <= 0) { particles.splice(i, 1); continue; }
-        const alpha = Math.max(0, p.life) * .58;
-        const g = ctx.createRadialGradient(p.x - p.r*.12, p.y - p.r*.18, p.r*.03, p.x, p.y, p.r);
-        g.addColorStop(0, `hsla(${p.hue}, 100%, 60%, ${alpha*.95})`);
-        g.addColorStop(.18, `hsla(${p.hue}, 100%, 43%, ${alpha})`);
-        g.addColorStop(.46, `hsla(38, 85%, 30%, ${alpha*.66})`);
-        g.addColorStop(.72, `hsla(151, 65%, 18%, ${alpha*.32})`);
-        g.addColorStop(1, "rgba(24,70,48,0)");
-        ctx.save(); ctx.translate(p.x, p.y); ctx.rotate(Math.sin(p.wobble)*.7); ctx.scale(p.rx || 1, p.ry || 1); ctx.fillStyle = g; ctx.beginPath(); ctx.arc(0, 0, p.r, 0, Math.PI*2); ctx.fill(); ctx.restore();
+      ctx.clearRect(0,0,width,height);
+      for(let i=particles.length-1;i>=0;i--){
+        const p=particles[i]; p.x+=p.vx; p.y+=p.vy; p.vx*=.99; p.vy*=.99; p.life-=p.decay; p.twinkle+=.12;
+        if(p.life<=0){particles.splice(i,1);continue;}
+        const alpha=Math.max(0,p.life)*(.45+.35*Math.sin(p.twinkle));
+        ctx.globalAlpha=alpha; ctx.fillStyle=p.color;
+        ctx.beginPath(); ctx.arc(p.x,p.y,p.r*p.life,0,Math.PI*2); ctx.fill();
+        if(p.r>3){ctx.strokeStyle=p.color;ctx.lineWidth=.8;ctx.beginPath();ctx.moveTo(p.x-3,p.y);ctx.lineTo(p.x+3,p.y);ctx.moveTo(p.x,p.y-3);ctx.lineTo(p.x,p.y+3);ctx.stroke();}
       }
-      raf = requestAnimationFrame(draw);
+      ctx.globalAlpha=1; raf=requestAnimationFrame(draw);
     };
-    resize(); window.addEventListener("resize", resize, { passive: true });
-    window.addEventListener("pointermove", move, { passive: true });
-    raf = requestAnimationFrame(draw);
-    return () => { cancelAnimationFrame(raf); window.removeEventListener("resize", resize); window.removeEventListener("pointermove", move); };
-  }, []);
-  return <canvas ref={canvasRef} className="smoke-trail-canvas" aria-hidden="true" />;
+    resize(); window.addEventListener("resize",resize,{passive:true}); window.addEventListener("pointermove",move,{passive:true}); raf=requestAnimationFrame(draw);
+    return()=>{cancelAnimationFrame(raf);window.removeEventListener("resize",resize);window.removeEventListener("pointermove",move);};
+  },[]);
+  return <canvas ref={canvasRef} className="smoke-trail-canvas soft-particle-trail" aria-hidden="true" />;
 }
-
 
 
 const projects = [
