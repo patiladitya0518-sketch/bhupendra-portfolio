@@ -139,7 +139,7 @@ export default function App() {
     <CursorSmokeCanvas />
 
     <header className="topbar">
-      <a className="brand" href="#home" onClick={closeMenu}>BP<span>.</span></a>
+      <a className="brand brand-avatar" href="#home" onClick={closeMenu} aria-label="Bhupendra Patil — home"><img src="/profile.jpg" alt="" /><span className="brand-name">Bhupendra Patil</span></a>
       <button className="mobile-menu" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle navigation" aria-expanded={menuOpen}>{menuOpen ? <X /> : <Menu />}</button>
       <nav className={menuOpen ? "nav-links open" : "nav-links"} aria-label="Main navigation">
         {nav.map(([id, label]) => <a key={id} className={active === id ? "active" : ""} href={`#${id}`} onClick={closeMenu}>{label}</a>)}
@@ -206,6 +206,6 @@ export default function App() {
         <Reveal className="contact-panel"><div className="section-kicker">04 / CONTACT</div><h2>Let's make something <span className="gradient-text">useful.</span></h2><p>If you'd like to discuss a project, share an idea, or connect about web development and AI voice assistants, feel free to reach out.</p><div className="contact-details"><a className="contact-detail" href="mailto:Bhupendrapatil1218@gmail.com?subject=Portfolio%20Enquiry"><span className="contact-detail-icon"><Mail size={18}/></span><span><small>Email me</small><strong>Bhupendrapatil1218@gmail.com</strong></span><ArrowUpRight className="contact-detail-arrow" size={17}/></a><a className="contact-detail" href="tel:+919168919121"><span className="contact-detail-icon phone-icon">☎</span><span><small>Call me</small><strong>+91 91689 19121</strong></span><ArrowUpRight className="contact-detail-arrow" size={17}/></a></div><div className="education-card"><span className="education-label">EDUCATION</span><strong>Master of Computer Applications (MCA)</strong><span>Current studies</span><div className="education-divider"/><strong>Bachelor of Computer Science</strong><span>K.R.T. Arts, B.H. Commerce and A.M. Science College</span></div><div className="social-links"><a href="https://github.com/ProjectTesting18" target="_blank" rel="noreferrer">GitHub ↗</a><a href="https://github.com/patiladitya0518-sketch" target="_blank" rel="noreferrer">More projects ↗</a></div></Reveal>
       </section>
     </main>
-    <footer className="footer"><a className="brand" href="#home">BP<span>.</span></a><span>Designed and built by Bhupendra Patil · <span id="year">{new Date().getFullYear()}</span></span><a href="#home" className="back-top">Back to top ↑</a></footer>
+    <footer className="footer"><a className="brand brand-avatar footer-brand-avatar" href="#home" aria-label="Bhupendra Patil — home"><img src="/profile.jpg" alt="" /><span className="brand-name">Bhupendra Patil</span></a><span>Designed and built by Bhupendra Patil · <span id="year">{new Date().getFullYear()}</span></span><a href="#home" className="back-top">Back to top ↑</a></footer>
   </div>;
 }
