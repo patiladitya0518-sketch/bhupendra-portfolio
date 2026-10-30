@@ -718,3 +718,20 @@ html,body{background:#f8f8f3!important;color:#26352b!important}
 .soft-particle-trail{opacity:.72!important;mix-blend-mode:multiply!important;pointer-events:none!important;z-index:20!important}
 @media(max-width:760px){.soft-particle-trail{display:none!important}}
 @media(prefers-reduced-motion:reduce){.soft-particle-trail{display:none!important}}
+
+/* Advanced motion blend: particle ambience, cinematic hero, card spotlight and scroll reveals */
+.hero-copy h1{animation:softHeroReveal .95s cubic-bezier(.2,.75,.25,1) both;animation-delay:.12s}
+.hero-copy .role-line{animation:softHeroReveal .8s cubic-bezier(.2,.75,.25,1) both;animation-delay:.22s}
+.hero-copy .hero-intro{animation:softHeroReveal .85s cubic-bezier(.2,.75,.25,1) both;animation-delay:.3s}
+.hero-copy .hero-actions{animation:softHeroReveal .85s cubic-bezier(.2,.75,.25,1) both;animation-delay:.4s}
+@keyframes softHeroReveal{from{opacity:0;transform:translate3d(0,22px,0);clip-path:inset(0 0 35% 0)}to{opacity:1;transform:translate3d(0,0,0);clip-path:inset(0 0 0 0)}}
+.project-card{position:relative;isolation:isolate;transform:perspective(900px) rotateX(var(--tilt-x,0deg)) rotateY(var(--tilt-y,0deg));will-change:transform}
+.project-card:after{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;border-radius:inherit;opacity:0;background:radial-gradient(circle at var(--spot-x,50%) var(--spot-y,50%),#a8c4a238,transparent 48%);transition:opacity .25s ease}
+.project-card.is-tilting:after{opacity:1}
+.project-card.is-tilting{box-shadow:0 22px 44px #26352b18,0 0 0 1px #a8c4a255!important;transition:box-shadow .25s ease!important}
+.project-card .project-art{transition:transform .45s cubic-bezier(.2,.8,.2,1)}
+.project-card.is-tilting .project-art{transform:translateZ(12px)}
+.section-block>.reveal,.about-grid .reveal,.project-grid .reveal{backface-visibility:hidden}
+.smoke-trail-canvas{opacity:.56!important;mix-blend-mode:multiply!important}
+@media(max-width:760px){.project-card{transform:none!important;will-change:auto}.project-card:after{display:none}.hero-copy h1{animation-duration:.6s}}
+@media(prefers-reduced-motion:reduce){.hero-copy h1,.hero-copy .role-line,.hero-copy .hero-intro,.hero-copy .hero-actions{animation:none!important;clip-path:none!important}.project-card{transform:none!important;will-change:auto}.project-card:after{display:none}}
