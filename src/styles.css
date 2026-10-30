@@ -749,3 +749,11 @@ html,body{background:#f8f8f3!important;color:#26352b!important}
 @keyframes asteroidAppear{0%,8%,88%,100%{opacity:0;scale:.72;filter:blur(3px)}18%,72%{opacity:1;scale:1;filter:blur(0)}80%{opacity:.72;scale:.94;filter:blur(1px)}}
 @media(max-width:760px){.skill-asteroid-orbit{inset:2% -4%;opacity:.9}.skill-asteroid{min-width:0;padding:8px 10px;gap:6px}.skill-asteroid strong{font-size:10px}.skill-asteroid small{font-size:9px}.asteroid-1{left:36%;top:2%}.asteroid-2{left:72%;top:24%}.asteroid-3{left:69%;top:72%}.asteroid-4{left:35%;top:85%}.asteroid-5{left:0;top:66%}.asteroid-6{left:0;top:23%}}
 @media(prefers-reduced-motion:reduce){.skill-asteroid-orbit,.skill-asteroid,.skill-asteroid .asteroid-copy{animation:none!important}.skill-asteroid{opacity:1;scale:1;filter:none}}
+
+
+/* Skill asteroids: typography-only labels, no pill/card backgrounds */
+.skill-asteroid{min-width:0!important;padding:5px 7px!important;border:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;backdrop-filter:none!important;color:#26352b!important;gap:7px!important}
+.skill-asteroid .asteroid-core{width:8px!important;height:8px!important;flex-basis:8px!important;box-shadow:0 0 9px #a8c4a255!important}
+.skill-asteroid strong{font-size:13px!important;text-shadow:0 1px 8px rgba(255,255,255,.7)}
+.skill-asteroid small{font-size:10px!important;color:#647067!important;text-shadow:0 1px 8px rgba(255,255,255,.8)}
+@media(max-width:760px){.skill-asteroid{padding:4px 5px!important;gap:5px!important}.skill-asteroid strong{font-size:11px!important}.skill-asteroid small{font-size:9px!important}}
