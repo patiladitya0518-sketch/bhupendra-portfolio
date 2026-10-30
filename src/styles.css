@@ -496,3 +496,30 @@ html,body{background:#080611!important;color:#f7f4ff!important}
  .project-card,.button,.profile-photo-frame{transition:none!important}
  .project-card:hover{transform:none!important}
 }
+
+
+/* Mixed-surface rhythm: light editorial panels between dark neon sections */
+#about{position:relative;padding:clamp(28px,4vw,48px);margin-top:70px;border:1px solid #b9a4ff55;border-radius:30px;background:linear-gradient(135deg,#f4f0ff,#eafcff)!important;color:#171027!important;box-shadow:0 24px 75px #0002}
+#about .section-kicker{color:#6b21a8!important}
+#about h2,#about .about-main h3,#about .about-side h3{color:#171027!important}
+#about .muted,#about .about-main p,#about .about-side ul{color:#514768!important}
+#about .panel{background:#ffffffc9!important;border-color:#b967ff35!important;box-shadow:0 12px 35px #31204a0b!important}
+#about .side-icon{background:#b967ff18!important;color:#7c3aed!important}
+#about .text-link{color:#6d28d9!important}
+#about .text-link:hover{color:#0891b2!important}
+#skills{position:relative;padding:clamp(28px,4vw,48px);margin-top:70px;border-radius:30px;background:linear-gradient(135deg,#eefcff,#f5efff)!important;border:1px solid #42f5ff55;color:#171027!important}
+#skills .section-kicker{color:#087e91!important}
+#skills h2{color:#171027!important}
+#skills .section-lead{color:#514768!important}
+#skills .skills-panel{background:#ffffffd9!important;border-color:#42c8d755!important;box-shadow:0 16px 42px #1423440b!important}
+#skills .skill-heading h3{color:#171027!important}
+#skills .skill-heading p{color:#625777!important}
+#skills .skill-icon{background:#42f5ff22!important;color:#6d28d9!important}
+#skills .skill-list span{background:#ffffffd9!important;border-color:#9d8cc533!important;color:#312747!important}
+#skills .skill-list span:hover{background:#e6fbff!important;border-color:#0891b2!important;color:#171027!important}
+#projects{padding-top:115px;padding-bottom:35px}
+#contact{padding-top:115px}
+@media(max-width:650px){
+ #about,#skills{padding:24px 18px;margin-top:48px;border-radius:22px}
+ #projects,#contact{padding-top:82px}
+}
