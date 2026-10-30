@@ -365,3 +365,11 @@ body{background:#f6f3eb!important;color:#182521!important}
 .project-art-marketiq .project-logo{width:min(100%,270px);height:100%;max-height:180px;object-fit:contain;padding:12px;position:relative;z-index:1;transition:transform .4s ease}
 .project-card:hover .project-art-marketiq .project-logo{transform:scale(1.04)}
 @media(prefers-reduced-motion:reduce){.project-art-marketiq .project-logo{transition:none}}
+
+/* Inspired by the interactive-portrait article: gentle idle motion and responsive hover */
+.profile-photo-frame{animation:portraitIdle 5.5s ease-in-out infinite;transform-origin:50% 55%;transition:box-shadow .35s ease,border-color .35s ease}
+.profile-photo{transition:transform .45s cubic-bezier(.2,.8,.2,1),filter .35s ease}
+.hero-visual:hover .profile-photo{transform:scale(1.035) translateY(-2px);filter:saturate(1.06)}
+.hero-visual:hover .profile-photo-frame{border-color:#d88936a8;box-shadow:0 22px 62px #176b5728,0 0 0 5px #d889361c}
+@keyframes portraitIdle{0%,100%{filter:drop-shadow(0 14px 24px #176b5710)}50%{filter:drop-shadow(0 20px 30px #176b5726)}}
+@media(prefers-reduced-motion:reduce){.profile-photo-frame{animation:none!important}.profile-photo{transition:none!important}}
