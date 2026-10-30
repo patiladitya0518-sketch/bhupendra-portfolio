@@ -373,3 +373,11 @@ body{background:#f6f3eb!important;color:#182521!important}
 .hero-visual:hover .profile-photo-frame{border-color:#d88936a8;box-shadow:0 22px 62px #176b5728,0 0 0 5px #d889361c}
 @keyframes portraitIdle{0%,100%{filter:drop-shadow(0 14px 24px #176b5710)}50%{filter:drop-shadow(0 20px 30px #176b5726)}}
 @media(prefers-reduced-motion:reduce){.profile-photo-frame{animation:none!important}.profile-photo{transition:none!important}}
+
+/* Full hero portrait interaction: idle float, pointer tilt, and smooth reset */
+.hero-visual{perspective:900px}
+.profile-photo-frame{transform-style:preserve-3d;will-change:filter,box-shadow}
+.profile-photo{transform-origin:center center;backface-visibility:hidden;will-change:transform;transition:transform .22s ease-out,filter .35s ease}
+.hero-visual:not(:hover) .profile-photo{transition:transform .55s cubic-bezier(.2,.8,.2,1),filter .35s ease}
+@media (hover:none),(pointer:coarse){.profile-photo{transform:none!important}}
+@media(prefers-reduced-motion:reduce){.profile-photo-frame{animation:none!important}.profile-photo{transition:none!important;transform:none!important}}
