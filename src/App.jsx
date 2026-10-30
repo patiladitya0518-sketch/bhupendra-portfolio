@@ -192,7 +192,7 @@ export default function App() {
       <section id="projects" className="section-wrap section-block">
         <Reveal><div className="section-kicker">02 / SELECTED WORK</div><h2>Things I've <span className="gradient-text">worked on.</span></h2><p className="section-lead">A selection of projects I have built and explored. Open each GitHub repository to browse the source code.</p></Reveal>
         <div className="project-grid">{projects.map((p, i) => <Reveal key={p.name} delay={i * .1} className={`project-card ${p.color}`}>
-          <div className="project-art"><span className="project-number">{p.number} / PROJECT</span><span className="project-symbol">{p.icon}</span><span className="art-ring ring-one" /><span className="art-ring ring-two" /></div>
+          <div className={`project-art ${p.name === "MarketIQ" ? "project-art-marketiq" : ""}`}><span className="project-number">{p.number} / PROJECT</span>{p.name === "MarketIQ" ? <img className="project-logo" src="/marketiq-logo.svg" alt="MarketIQ bull and candlestick logo" /> : <span className="project-symbol">{p.icon}</span>}<span className="art-ring ring-one" /><span className="art-ring ring-two" /></div>
           <div className="project-content"><p className="project-type">{p.type}</p><h3>{p.name}</h3><p className="project-description">{p.description}</p><div className="tag-list">{p.tags.map(tag => <span key={tag}>{tag}</span>)}</div>{p.url ? <a href={p.url} className="project-link" target="_blank" rel="noreferrer" aria-label={`View ${p.name} source code on GitHub`}>View source on GitHub <ArrowUpRight size={16}/></a> : <p className="project-note">{p.note}</p>}</div>
         </Reveal>)}</div>
       </section>
