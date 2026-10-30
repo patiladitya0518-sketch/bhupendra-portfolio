@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-labelledby="title desc">
+<title id="title">MarketIQ logo</title><desc id="desc">A navy bull with green and red candlestick bars and an upward teal arrow, representing intelligent trading.</desc>
+<defs><linearGradient id="teal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#18d6a0"/><stop offset="1" stop-color="#087b68"/></linearGradient><linearGradient id="navy" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#123d53"/><stop offset="1" stop-color="#091b30"/></linearGradient></defs>
+<rect width="640" height="420" rx="28" fill="#f7f8f4"/>
+<g transform="translate(0 4)">
+<!-- horns -->
+<path d="M224 116 Q160 100 139 48 Q188 69 238 94 L263 124Z" fill="url(#navy)"/>
+<path d="M416 116 Q480 100 501 48 Q452 69 402 94 L377 124Z" fill="#e94343"/>
+<!-- bull head -->
+<path d="M222 104 Q249 77 280 94 L320 113 L360 94 Q391 77 418 104 L403 152 L378 191 L356 234 L320 258 L284 234 L262 191 L237 152Z" fill="url(#navy)"/>
+<path d="M258 139 L292 154 L282 170 L251 160Z" fill="#f7f8f4"/>
+<path d="M382 139 L348 154 L358 170 L389 160Z" fill="#f7f8f4"/>
+<path d="M291 198 Q320 214 349 198 L339 225 L320 236 L301 225Z" fill="url(#teal)"/>
+<!-- candlesticks -->
+<g stroke-width="5" stroke-linecap="round">
+<path d="M184 188V280" stroke="#17a978"/><rect x="170" y="211" width="28" height="45" rx="3" fill="#17a978"/>
+<path d="M229 163V300" stroke="#e94343"/><rect x="215" y="191" width="28" height="63" rx="3" fill="#e94343"/>
+<path d="M274 178V315" stroke="#17a978"/><rect x="260" y="204" width="28" height="76" rx="3" fill="#17a978"/>
+<path d="M366 176V305" stroke="#e94343"/><rect x="352" y="198" width="28" height="68" rx="3" fill="#e94343"/>
+<path d="M411 154V278" stroke="#17a978"/><rect x="397" y="181" width="28" height="57" rx="3" fill="#17a978"/>
+</g>
+<!-- growth arrow -->
+<path d="M151 304 Q247 353 344 303 Q405 272 456 213" fill="none" stroke="url(#teal)" stroke-width="12" stroke-linecap="round"/>
+<path d="M435 207 L477 194 L467 237Z" fill="#12b981"/>
+</g>
+<text x="320" y="365" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="48" font-weight="800" letter-spacing="-1.8" fill="#10263d">Market<tspan fill="#109b78">IQ</tspan></text>
+<text x="320" y="395" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="13" letter-spacing="4" fill="#53675f">TRADE SMARTER. DECIDE BETTER.</text>
+</svg>
