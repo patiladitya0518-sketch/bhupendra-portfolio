@@ -111,6 +111,28 @@ export default function App() {
     return () => window.clearInterval(timer);
   }, []);
   useEffect(() => {
+    const cards = Array.from(document.querySelectorAll(".project-card"));
+    const cleanup = [];
+    if (!window.matchMedia("(pointer: fine), (prefers-reduced-motion: no-preference)").matches || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    cards.forEach(card => {
+      const move = event => {
+        const rect = card.getBoundingClientRect();
+        const x = (event.clientX - rect.left) / rect.width;
+        const y = (event.clientY - rect.top) / rect.height;
+        card.style.setProperty("--tilt-x", ((.5-y)*4).toFixed(2)+"deg");
+        card.style.setProperty("--tilt-y", ((x-.5)*5).toFixed(2)+"deg");
+        card.style.setProperty("--spot-x", (x*100).toFixed(1)+"%");
+        card.style.setProperty("--spot-y", (y*100).toFixed(1)+"%");
+        card.classList.add("is-tilting");
+      };
+      const leave = () => { card.classList.remove("is-tilting"); card.style.removeProperty("--tilt-x"); card.style.removeProperty("--tilt-y"); };
+      card.addEventListener("pointermove", move, {passive:true});
+      card.addEventListener("pointerleave", leave, {passive:true});
+      cleanup.push(() => {card.removeEventListener("pointermove",move);card.removeEventListener("pointerleave",leave);});
+    });
+    return () => cleanup.forEach(fn => fn());
+  }, []);
+  useEffect(() => {
     const ids = ["home", "about", "projects", "skills", "contact"];
     const obs = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) setActive(e.target.id); }), { rootMargin: "-35% 0px -55% 0px" });
     ids.forEach(id => { const el = document.getElementById(id); if (el) obs.observe(el); });
