@@ -735,3 +735,17 @@ html,body{background:#f8f8f3!important;color:#26352b!important}
 .smoke-trail-canvas{opacity:.56!important;mix-blend-mode:multiply!important}
 @media(max-width:760px){.project-card{transform:none!important;will-change:auto}.project-card:after{display:none}.hero-copy h1{animation-duration:.6s}}
 @media(prefers-reduced-motion:reduce){.hero-copy h1,.hero-copy .role-line,.hero-copy .hero-intro,.hero-copy .hero-actions{animation:none!important;clip-path:none!important}.project-card{transform:none!important;will-change:auto}.project-card:after{display:none}}
+
+
+/* Orbiting skill asteroids around the hero portrait */
+.skill-asteroid-orbit{position:absolute;inset:0;z-index:5;pointer-events:none;animation:skillOrbitSpin 34s linear infinite;transform-origin:50% 50%}
+.skill-asteroid{position:absolute;display:flex;align-items:center;gap:9px;min-width:118px;padding:10px 13px;border:1px solid #dce5dc;border-radius:999px;background:rgba(255,255,255,.88);box-shadow:0 10px 28px rgba(38,53,43,.10);color:#26352b;backdrop-filter:blur(12px);opacity:0;animation:asteroidAppear 6.8s ease-in-out infinite;animation-delay:calc(var(--asteroid-index)*-1.12s)}
+.skill-asteroid .asteroid-core{width:13px;height:13px;flex:0 0 13px;border-radius:50%;background:radial-gradient(circle at 30% 25%,#f8f5e9 0,#a8c4a2 48%,#536f58 100%);box-shadow:0 0 12px #a8c4a255}
+.skill-asteroid .asteroid-copy{display:flex;flex-direction:column;gap:2px;white-space:nowrap;animation:skillOrbitCounter 34s linear infinite}
+.skill-asteroid strong{font-size:12px;font-weight:700;line-height:1.2}.skill-asteroid small{font-size:10px;color:#647067;line-height:1.2}
+.asteroid-1{left:42%;top:5%}.asteroid-2{left:76%;top:24%}.asteroid-3{left:76%;top:67%}.asteroid-4{left:42%;top:83%}.asteroid-5{left:5%;top:65%}.asteroid-6{left:3%;top:24%}
+@keyframes skillOrbitSpin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+@keyframes skillOrbitCounter{from{transform:rotate(0deg)}to{transform:rotate(-360deg)}}
+@keyframes asteroidAppear{0%,8%,88%,100%{opacity:0;scale:.72;filter:blur(3px)}18%,72%{opacity:1;scale:1;filter:blur(0)}80%{opacity:.72;scale:.94;filter:blur(1px)}}
+@media(max-width:760px){.skill-asteroid-orbit{inset:2% -4%;opacity:.9}.skill-asteroid{min-width:0;padding:8px 10px;gap:6px}.skill-asteroid strong{font-size:10px}.skill-asteroid small{font-size:9px}.asteroid-1{left:36%;top:2%}.asteroid-2{left:72%;top:24%}.asteroid-3{left:69%;top:72%}.asteroid-4{left:35%;top:85%}.asteroid-5{left:0;top:66%}.asteroid-6{left:0;top:23%}}
+@media(prefers-reduced-motion:reduce){.skill-asteroid-orbit,.skill-asteroid,.skill-asteroid .asteroid-copy{animation:none!important}.skill-asteroid{opacity:1;scale:1;filter:none}}
