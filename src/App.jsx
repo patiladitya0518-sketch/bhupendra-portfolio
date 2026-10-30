@@ -176,6 +176,16 @@ export default function App() {
         <motion.div className="hero-visual" onMouseMove={e => { const box = e.currentTarget.getBoundingClientRect(); const px = (e.clientX - box.left) / box.width - 0.5; const py = (e.clientY - box.top) / box.height - 0.5; const photo = e.currentTarget.querySelector(".profile-photo"); if (photo) photo.style.transform = "perspective(700px) rotateX(" + (-py * 9) + "deg) rotateY(" + (px * 11) + "deg) scale(1.045)"; }} onMouseLeave={e => { const photo = e.currentTarget.querySelector(".profile-photo"); if (photo) photo.style.transform = ""; }} initial={{ opacity: 0, scale: .9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 1, delay: .2 }}>
           <div className="orbit orbit-a" /><div className="orbit orbit-b" /><div className="orbit orbit-c" />
           <div className="planet"><div className="planet-shine" /><div className="planet-grid" /></div>
+          <div className="skill-asteroid-orbit" aria-label="Orbiting skills">
+            {[
+              ["React", "Frontend"], ["Python", "AI & scripting"], ["UI/UX", "Design"], ["Node.js", "Backend"], ["SQL", "Databases"], ["AI Projects", "Problem solving"]
+            ].map(([name, detail], index) => (
+              <div className={`skill-asteroid asteroid-${index + 1}`} key={name} style={{ "--asteroid-index": index }}>
+                <span className="asteroid-core" aria-hidden="true" />
+                <span className="asteroid-copy"><strong>{name}</strong><small>{detail}</small></span>
+              </div>
+            ))}
+          </div>
           <div className="floating-label label-top"><span className="mini-dot cyan" /> Creative developer</div>
           <div className="floating-label label-bottom"><span className="label-icon"><Layers3 size={17} /></span><span><small>Currently building</small><b>Projects with purpose</b></span></div>
           <motion.div className="profile-photo-frame" animate={{ x: Math.min(scrollY * 0.045, typeof window !== "undefined" && window.innerWidth < 650 ? 8 : 42), y: Math.min(scrollY * 0.008, 9), rotate: Math.min(scrollY * 0.001, 0.8) }} transition={{ type: "spring", stiffness: 75, damping: 22 }}><img className="profile-photo" src="/profile.jpg" alt="Bhupendra Patil" /></motion.div>
