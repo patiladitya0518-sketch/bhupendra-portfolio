@@ -113,7 +113,7 @@ export default function App() {
   useEffect(() => {
     const cards = Array.from(document.querySelectorAll(".project-card"));
     const cleanup = [];
-    if (!window.matchMedia("(pointer: fine), (prefers-reduced-motion: no-preference)").matches || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    if (window.matchMedia("(pointer: coarse)").matches || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     cards.forEach(card => {
       const move = event => {
         const rect = card.getBoundingClientRect();
