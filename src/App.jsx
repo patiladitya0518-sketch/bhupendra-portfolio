@@ -27,10 +27,10 @@ function CursorSmokeCanvas() {
         const count = Math.min(5, Math.max(1, Math.ceil(distance / 18)));
         for (let i = 0; i < count; i++) {
           const t = (i + 1) / count;
-          particles.push({ x: lastX + dx*t, y: lastY + dy*t, vx: -dx*.025 + (Math.random()-.5)*1.05, vy: -dy*.025 + (Math.random()-.5)*.8, r: 28 + Math.random()*52, rx: 0.55 + Math.random()*1.15, ry: 0.7 + Math.random()*1.5, wobble: Math.random()*Math.PI*2, wobbleSpeed: .012 + Math.random()*.035, life: 1, decay: .003 + Math.random()*.0025, hue: Math.random() > .65 ? 355 : 348 });
+          particles.push({ x: lastX + dx*t, y: lastY + dy*t, vx: -dx*.025 + (Math.random()-.5)*1.05, vy: -dy*.025 + (Math.random()-.5)*.8, r: 28 + Math.random()*52, rx: 0.55 + Math.random()*1.15, ry: 0.7 + Math.random()*1.5, wobble: Math.random()*Math.PI*2, wobbleSpeed: .012 + Math.random()*.035, life: 1, decay: .003 + Math.random()*.0025, hue: Math.random() > .65 ? 38 : 151 });
         }
       } else {
-        particles.push({x,y,vx:(Math.random()-.5)*.5,vy:(Math.random()-.5)*.5,r:32,rx:.8,ry:1.25,wobble:Math.random()*6,wobbleSpeed:.02,life:1,decay:.006,hue:350});
+        particles.push({x,y,vx:(Math.random()-.5)*.5,vy:(Math.random()-.5)*.5,r:32,rx:.8,ry:1.25,wobble:Math.random()*6,wobbleSpeed:.02,life:1,decay:.006,hue:38});
       }
       lastX = x; lastY = y; lastEmit = performance.now();
       if (particles.length > 70) particles.splice(0, particles.length - 70);
@@ -45,9 +45,9 @@ function CursorSmokeCanvas() {
         const g = ctx.createRadialGradient(p.x - p.r*.12, p.y - p.r*.18, p.r*.03, p.x, p.y, p.r);
         g.addColorStop(0, `hsla(${p.hue}, 100%, 60%, ${alpha*.95})`);
         g.addColorStop(.18, `hsla(${p.hue}, 100%, 43%, ${alpha})`);
-        g.addColorStop(.46, `hsla(2, 100%, 30%, ${alpha*.66})`);
-        g.addColorStop(.72, `hsla(355, 90%, 18%, ${alpha*.32})`);
-        g.addColorStop(1, "rgba(80,0,20,0)");
+        g.addColorStop(.46, `hsla(38, 85%, 30%, ${alpha*.66})`);
+        g.addColorStop(.72, `hsla(151, 65%, 18%, ${alpha*.32})`);
+        g.addColorStop(1, "rgba(24,70,48,0)");
         ctx.save(); ctx.translate(p.x, p.y); ctx.rotate(Math.sin(p.wobble)*.7); ctx.scale(p.rx || 1, p.ry || 1); ctx.fillStyle = g; ctx.beginPath(); ctx.arc(0, 0, p.r, 0, Math.PI*2); ctx.fill(); ctx.restore();
       }
       raf = requestAnimationFrame(draw);
