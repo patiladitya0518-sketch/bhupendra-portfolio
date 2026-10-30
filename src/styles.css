@@ -650,3 +650,66 @@ html,body{background:#202720!important;color:#f5f2e9!important}
  .project-card:hover{transform:none!important}
  .cursor-smoke,.smoke-trail-canvas{display:none!important}
 }
+
+
+/* SOFT MINIMAL — LIGHT CANVAS REDESIGN */
+:root{color-scheme:light;--muted:#647067;--line:#dce5dc;--purple:#64856a;--cyan:#b87958}
+html,body{background:#f8f8f3!important;color:#26352b!important}
+.site-shell{background:radial-gradient(ellipse at 12% 5%,#dce9d7aa,transparent 36%),radial-gradient(ellipse at 88% 26%,#f2dfd1a0,transparent 34%),#f8f8f3!important;color:#26352b!important}
+.site-shell:before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:.15;background-image:radial-gradient(#6b806d 0.65px,transparent 0.65px);background-size:22px 22px;mask-image:linear-gradient(to bottom,#000,transparent 72%)}
+.ambient-one{background:#a8c4a2!important;opacity:.2!important;filter:blur(100px)!important}.ambient-two{background:#e6b99e!important;opacity:.19!important;filter:blur(110px)!important}
+.topbar{background:#f8f8f3df!important;border-bottom:1px solid #dce5dc!important;backdrop-filter:blur(18px)!important}
+.brand-avatar img{border-color:#8ca68a!important;box-shadow:0 0 0 3px #a8c4a222!important}
+.brand-avatar .brand-name,.footer .brand{color:#26352b!important}.nav-links{color:#58665a!important}
+.nav-links a:hover,.nav-links a.active{color:#436d4b!important}.nav-cta{border-color:#d0dacf!important;background:#ffffff9c!important;color:#344638!important}
+.nav-cta:hover{border-color:#8ca68a!important;background:#eaf1e7!important}
+.eyebrow{color:#496e4e!important;border-color:#cbdac8!important;background:#edf3e9!important}
+.status-dot{background:#709a71!important;box-shadow:0 0 10px #91b58c!important}
+.hero h1,.section-block h2{color:#26352b!important}.gradient-text{background-image:linear-gradient(105deg,#557d5b 0%,#7f9d76 52%,#b87958 100%)!important}
+.hero-intro,.section-lead{color:#647067!important}.hero-intro strong{color:#344638!important}.hero-meta{color:#647067!important}.hero-meta svg{color:#b87958!important}
+.button-primary{background:linear-gradient(110deg,#547b59,#779772)!important;color:#fff!important;box-shadow:0 8px 24px #557d5b24!important}
+.button-primary:hover{background:#3e6946!important;box-shadow:0 12px 30px #557d5b35!important}
+.button-quiet{background:#ffffffb8!important;color:#344638!important;border-color:#d5dfd3!important}.button-quiet:hover{border-color:#8ca68a!important;background:#edf3e9!important}
+.planet{background:radial-gradient(circle at 28% 23%,#f8f5e9 0,#dce9d7 15%,#a8c4a2 37%,#78947a 63%,#536f58 86%)!important;box-shadow:inset -25px -20px 45px #3c564a42,0 0 65px #8ca68a35!important}
+.planet-shine{background:#fff9e866!important}.planet-grid{background:repeating-radial-gradient(ellipse at center,transparent 0 22px,#ffffff60 23px 24px)!important}
+.orbit{border-color:#7c9d7b88!important}.orbit-b{border-color:#b8795866!important}.orbit-c{border-color:#557d5b44!important}
+.floating-label{background:#fffffff0!important;border-color:#dce5dc!important;color:#344638!important;box-shadow:0 12px 32px #26352b12!important}
+.floating-label small{color:#647067!important}.floating-label b{color:#26352b!important}
+.label-icon,.side-icon,.skill-icon{background:#e6eee2!important;color:#557d5b!important}
+.profile-photo-frame{border-color:#b87958!important;background:linear-gradient(145deg,#dce9d7,#a8c4a2 52%,#e6b99e)!important;box-shadow:0 20px 50px #26352b18,0 0 30px #8ca68a22!important}
+.profile-photo-frame:hover{box-shadow:0 24px 60px #26352b20,0 0 40px #8ca68a35!important}
+.quick-stats{border-color:#dce5dc!important;background:#ffffffa8!important;border-radius:20px;padding:20px 8px}
+.quick-stats>div{border-color:#dce5dc!important}.quick-stats strong{color:#557d5b!important}.quick-stats span{color:#647067!important}
+.section-kicker{color:#a36d50!important}
+.panel{background:#ffffffc9!important;border-color:#dce5dc!important;box-shadow:0 18px 45px #26352b08!important}
+.about-main h3,.about-side h3,.skill-heading h3{color:#26352b!important}.muted,.about-main p,.about-side ul,.skill-heading p{color:#647067!important}
+.about-side:hover,.about-main:hover,.skills-panel:hover{border-color:#a8c4a2!important;box-shadow:0 18px 45px #557d5b12!important}
+.text-link{color:#557d5b!important}.text-link:hover{color:#a36d50!important}
+.project-card{background:#fffefa!important;border-color:#dce5dc!important;box-shadow:0 12px 32px #26352b0c!important}
+.project-card:hover{border-color:#a8c4a2!important;box-shadow:0 20px 46px #26352b14,0 0 22px #8ca68a16!important}
+.project-art{background:radial-gradient(ellipse at 50% 50%,#a8c4a250,transparent 65%),linear-gradient(145deg,#edf3e9,#f5f1e8)!important}
+.project-card.cyan .project-art{background:radial-gradient(ellipse at 50% 50%,#b7d2b150,transparent 65%),linear-gradient(145deg,#e9f2e7,#f5f1e8)!important}
+.project-card.pink .project-art{background:radial-gradient(ellipse at 50% 50%,#e6b99e65,transparent 65%),linear-gradient(145deg,#f7e9df,#f5f1e8)!important}
+.project-number{color:#879287!important}.project-symbol{color:#557d5b!important;text-shadow:0 0 25px #8ca68a25!important}
+.cyan .project-symbol{color:#668d69!important}.pink .project-symbol{color:#a36d50!important}
+.project-type,.project-link{color:#557d5b!important}.cyan .project-type{color:#668d69!important}.pink .project-type{color:#a36d50!important}
+.project-content h3{color:#26352b!important}.project-description{color:#647067!important}
+.tag-list span,.skill-list span{background:#f7f8f2!important;border-color:#dce5dc!important;color:#4d5e50!important}
+.skill-list span:hover{border-color:#8ca68a!important;background:#eaf1e7!important;color:#26352b!important}
+.contact-panel{background:radial-gradient(ellipse at 12% 0%,#dce9d780,transparent 45%),radial-gradient(ellipse at 90% 100%,#f2dfd180,transparent 42%),#fffefa!important;border-color:#dce5dc!important}
+.contact-panel h2{color:#26352b!important}.contact-detail{background:#f8f8f3!important;border-color:#dce5dc!important;color:#26352b!important}
+.contact-detail:hover{border-color:#a8c4a2!important;background:#edf3e9!important}
+.contact-detail-icon{background:#e6eee2!important;color:#557d5b!important}.contact-detail-arrow,.education-label{color:#a36d50!important}
+.contact-detail small,.education-card>span:not(.education-label){color:#647067!important}
+.contact-detail strong,.education-card strong{color:#26352b!important}
+.education-card{background:#f8f8f3!important;border-color:#dce5dc!important}.education-divider{background:#dce5dc!important}
+.social-links a,.back-top{color:#557d5b!important}.social-links a:hover{color:#a36d50!important}
+.footer{border-top-color:#dce5dc!important;color:#647067!important}
+.cursor-smoke{mix-blend-mode:multiply!important;opacity:.12!important}.smoke-trail-canvas{opacity:.22!important;mix-blend-mode:multiply!important}
+::selection{background:#cbdac8;color:#26352b}
+.project-card,.panel,.contact-panel,.contact-detail,.button,.profile-photo-frame{transform-style:preserve-3d}
+.project-card{transition:transform .38s cubic-bezier(.2,.8,.2,1),border-color .3s,box-shadow .3s!important}
+.project-card:hover{transform:translateY(-7px) rotateX(1deg)!important}
+@media(max-width:760px){.nav-links{background:#fffefa!important;border:1px solid #dce5dc!important;box-shadow:0 18px 40px #26352b12!important}}
+@media(max-width:650px){.site-shell:before{opacity:.06}#about,#skills{padding:24px 18px;margin-top:48px;border-radius:22px}.project-card:hover{transform:translateY(-3px)!important}.cursor-smoke{opacity:.06!important}}
+@media(prefers-reduced-motion:reduce){.site-shell:before{display:none}.project-card,.button,.profile-photo-frame{transition:none!important}.project-card:hover{transform:none!important}.cursor-smoke,.smoke-trail-canvas{display:none!important}}
