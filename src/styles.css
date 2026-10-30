@@ -315,3 +315,47 @@ body{background:#f6f3eb!important;color:#182521!important}
 .brand-avatar .brand-name{font:600 15px 'Space Grotesk',sans-serif;letter-spacing:-.35px;color:#182521;white-space:nowrap}
 .footer-brand-avatar img{width:36px;height:36px;flex-basis:36px}
 @media(max-width:650px){.brand-avatar{gap:8px}.brand-avatar img{width:36px;height:36px;flex-basis:36px}.brand-avatar .brand-name{font-size:13px}}
+
+
+/* Avatar clarity and subtle premium motion */
+.brand-avatar img,
+.profile-photo {
+  filter: none !important;
+  image-rendering: auto;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.brand-avatar img {
+  animation: avatarHalo 3.8s ease-in-out infinite;
+  will-change: box-shadow;
+}
+.brand-avatar:hover img {
+  animation-play-state: paused;
+  transform: scale(1.08) rotate(-3deg);
+  box-shadow: 0 0 0 5px #d8893630, 0 5px 18px #176b5730;
+}
+.profile-photo-frame {
+  animation: portraitFloat 5.5s ease-in-out infinite;
+  will-change: box-shadow;
+}
+.profile-photo {
+  object-fit: cover;
+  object-position: center 22%;
+  transform: translateZ(0);
+  transition: filter .35s ease, transform .55s cubic-bezier(.2,.8,.2,1);
+}
+.profile-photo-frame:hover .profile-photo {
+  transform: translateZ(0) scale(1.035);
+}
+@keyframes avatarHalo {
+  0%, 100% { box-shadow: 0 0 0 3px #d8893620, 0 0 0 0 #176b5700; }
+  50% { box-shadow: 0 0 0 4px #d8893650, 0 0 0 7px #176b5710; }
+}
+@keyframes portraitFloat {
+  0%, 100% { box-shadow: 0 24px 70px #18252122, 0 0 35px #d8893615; }
+  50% { box-shadow: 0 28px 78px #18252127, 0 0 48px #d8893628; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .brand-avatar img, .profile-photo-frame { animation: none !important; }
+  .profile-photo { transition: none !important; }
+}
